@@ -1,0 +1,69 @@
+1. Độ phức tạp của tìm kiếm nhị phân: 
+	Ο(log n)
+2. ??
+3. Để có thể thực hiện tìm kiếm trên dãy A, dãy A phải thỏa mãn 
+	D. Dãy phải được sắp xếp tăng / giảm
+4.Cho biết độ phức tạp của đoạn lệnh sau i=1; while(i<=n){k++, i*=2}
+	Ο(log n)
+5. Độ phwucs  tạp tốt nhất của dãy con liên tiếp lớn nhất là: 
+	O(n)
+6. Điểm nào sau đây khum thuộc về phương pháp vét cạn:
+	Chia bài toán lớn thành các bài toán con
+7.Phương pháp quay lui giải bài toán theo cách:
+	Tìm lời giải theo chiều sâu
+8.Trong bài toán 8 quân hậu , sau khi đã đặt quân hậu ở hàng thứ 1 thì số khả năng đặt quân hậu ở hằng 2 ít nhất bao nhiêu?
+	6
+9.Trong bài toán 8 quân hậu, sau khi đã đặt quân hậu ở hàng thứ nhất và đặt một quân hậuởhàng thứ2thì số khả năng có thể đặt quân hậu ở
+hàng thứ 3 ít nhất là bao nhiêu:
+	4
+10.Theo phương pháp chia để trị,số phép nhân cần thiết khi tính x^25 là bao nhiêu?
+	6
+11. Theo thuật toán nhân Ấn Độ,khi nhân 13 với 17,sau lần lặp thứ2,giá trị biến S bằng bao nhiêu?
+S=0;
+while b>0 { 
+	nếu b lẻ thì 
+		S=S+ a;
+		b=b/2;
+	if(b>0)
+		 a=a+a; 
+}
+return S;
+
+s	a	b
+0	 13	 17
+13	26	8
+13	
+
+12.Trong bài toán máy bay trực thăng đi tuần,giả sử có các bình xăng có giá trị lần lượt là (3,5,1,4) và khoảng k=2 thì có bao nhiêu cách để bố trí các
+bình xăng để đi tuần.
+	3
+13. Điểm giống nhau giữa phương pháp chia để trị và phương pháp quy hoạch động là:
+14.Trong bài toán con chuột di chuyển trong mê cung để đi về đích,mộtôđược gọi là an toàn khi thoả bao nhiêu điều kiện:
+ if (x >= 0 && x < N && y >= 0 && y < N && maze[x][y] == 1) 
+ 	5
+15. Trong bài toán sudoku,khi điền một số vào trong mộtôthì cần phải kiểm tra bao nhiêu điều kiện:
+	3
+16.Thuật toán nào dưới đây có thể cho ra kết quả sai?
+	Tham lam
+	Xác suất
+17.Theo phương pháp tham lam,số lần đọc file là bao nhiêu khi ta ghép5file có kích lần lượt là(13,10,4,8.3}lại thành một file.
+3 4 	7
+7 8 	15
+10 13	23
+15 23	38
+
+	83
+18.Có thể phân thuật toán xác xuất thành bao nhiêu nhóm?
+	2
+19.Trong định nghĩa đệ quy bài toán con kiến,nếu gọiC(5,4)thì số lần trung gian cần phải gọi(tính)C(3.3)là:
+	2
+20.Độ phức tạp khi tính chuỗi con đối xứng dài nhất theo phương pháp qui hoạch động là:
+	O(n^3)
+
+TIENTU = GTP
+TRUNG TU = TGP
+HAU TU T P G
+
+tiền tự, trung tự, hậu tự thứ tự lệnh in lần lượt là 1,2,3
+
+

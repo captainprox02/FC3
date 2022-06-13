@@ -28,7 +28,6 @@ Node* newNode(int key)
 
 Node *rightRotate(Node *y)
 {
-    cout<<"Rotating right"<<endl;
     Node *x = y->left;
     Node *T2 = x->right;
  
@@ -48,7 +47,6 @@ Node *rightRotate(Node *y)
  
 Node *leftRotate(Node *x)
 {
-    cout<<"Rotating right"<<endl;
     Node *y = x->right;
     Node *T2 = y->left;
  
@@ -87,20 +85,27 @@ Node* insert(Node* node, int key)
                         height(node->right));
  
     int balance = getBalance(node);
-    if (balance > 1 && key < node->left->key)
+    if (balance > 1 && key < node->left->key){
+        cout<<"qR"<<endl;
         return rightRotate(node);
+    }
+        
  
-    if (balance < -1 && key > node->right->key)
+    if (balance < -1 && key > node->right->key){
+        cout<<"qL"<<endl;
         return leftRotate(node);
+    }       
  
     if (balance > 1 && key > node->left->key)
     {
+        cout<<"qLR"<<endl;
         node->left = leftRotate(node->left);
         return rightRotate(node);
     }
  
     if (balance < -1 && key < node->right->key)
     {
+        cout<<"qRL"<<endl;
         node->right = rightRotate(node->right);
         return leftRotate(node);
     }
