@@ -126,3 +126,291 @@ L(i,j)=max(L(i+1,j),L(i,j-1))nếuS[i]<S[j]
 	(On^3)
 28.Phương pháp tham lam tìm giải bài toán người du lịch có độ phức tạp là
  	O(n^2)
+
+
+O(1)
+
+// Here c is a constant   
+   for (int i = 1; i <= c; i++) {  
+        // some O(1) expressions
+   }
+O(n)
+
+// Here c is a positive integer constant   
+   for (int i = 1; i <= n; i += c) {  
+        // some O(1) expressions
+   }
+
+   for (int i = n; i > 0; i -= c) {
+        // some O(1) expressions
+   }
+
+O(n^c)
+
+for (int i = 1; i <=n; i += c) {
+       for (int j = 1; j <=n; j += c) {
+          // some O(1) expressions
+       }
+   }
+
+   for (int i = n; i > 0; i -= c) {
+       for (int j = i+1; j <=n; j += c) {
+          // some O(1) expressions
+   }
+
+
+O(Logn)
+
+   for (int i = 1; i <=n; i *= c) {
+       // some O(1) expressions
+   }
+   for (int i = n; i > 0; i /= c) {
+       // some O(1) expressions
+   }
+
+tim kiem nhi phan
+
+boolean bsearch(int x)
+{
+    int L = 0, R = a.length - 1;
+    while (L <= R)
+    {
+        int m = (L + R) / 2;
+        if (a[m] == x)
+        {
+            System.out.println(" vi tri =" + m);
+            return true;
+        }
+        else if (a[m] > x)
+            R = m - 1;
+        else
+            L = m + 1;
+    }
+    return false;
+}
+
+Vét cạn
+
+Brute force is a straightforward approach to solving a problem,
+usually directly based on the problem statement and definitions of the
+concepts involved.
+The “force” implied by the strategy’s definition is that of a computer and
+not that of one’s intellect.
+The brute-force strategy is indeed the one that is easiest to apply.
+
+
+- Giải bài toán bằng cách liệt kê tất cả các trường
+hợp là ứng viên của lời giải.
+- Kiểm tra từng ứng viên để chọn ra lời giải.
+Ưu điểm: Đơn giản, dễ chứng minh tính đúng đắn
+Hạn chế: Không có chiến lược nào trong quá trình
+tìm lời giải.
+Khi kích thước dữ liệu lớn thì thời gian giải rất lâu, do xét tất cả ứng viên
+
+Phương pháp quay lui (Back Tracking)
+
+Backtracking is an algorithmic-technique for solving problems
+recursively by trying to build a solution incrementally, one
+piece at a time, removing those solutions that fail to satisfy
+the constraints of the problem at any point of time (by time,
+here, is referred to the time elapsed till reaching any level of
+the search tree)
+
+There are three types of problems in backtracking
+• Decision Problem – In this, we search for a feasible solution. 
+• Optimization Problem – In this, we search for the best
+solution. 
+• Enumeration Problem 
+
+Tư tưởng của phương pháp là thử từng khả năng
+cho đến khi tìm thấy lời giải đúng.
+Đó là một quá trình tìm kiếm theo độ sâu trong một tập hợp các lời giải.
+
+Sudoku
+
+bool isSafe(int grid[9][9], int row, int col, int num)
+{
+    return !UsedInRow(grid, row, num) &&
+           !UsedInCol(grid, col, num) &&
+           !UsedInBox(grid, row - row % 3, col - col % 3, num) &&
+           grid[row][col] == 0;
+}
+
+bool SolveSudoku(int grid[9][9])
+{
+    int row, col;
+    if (!EmptyCell(grid, row, col))
+        return true;
+    for (int num = 1; num <= 9; num++)
+        if (isSafe(grid, row, col, num))
+        { // số num có thể đặt vào ô r,c
+            grid[row][col] = num;
+            if (SolveSudoku(grid))
+                return true; // đã điền hết thì trả về true
+            grid[row][col] = 0;
+        }
+    return false;
+}
+
+bool EmptyCell(int grid[9][9], int &row, int &col)
+{
+    for (row = 0; row < 9; row++)
+        for (col = 0; col < 9; col++)
+            if (grid[row][col] == 0)
+                return true;
+    return false;
+}
+
+bool UsedInRow(int grid[9][9], int row, int num)
+{
+    for (int col = 0; col < 9; col++)
+        if (grid[row][col] == num)
+            return true;
+    return false;
+}
+bool UsedInCol(int grid[9][9], int col, int num)
+{
+    for (int row = 0; row < 9; row++)
+        if (grid[row][col] == num)
+            return true;
+    return false;
+}
+
+#include <bits/stdc++.h>
+using namespace std;
+void printGrid(int grid[9][9])
+{
+    for (int row = 0; row < 9; row++)
+    {
+        for (int col = 0; col < 9; col++)
+            cout << grid[row][col] << " ";
+        cout << endl;
+    }
+}
+
+ Rat in a Maze
+
+bool isSafe(int maze[N][N], int x, int y)
+{
+    // nếu vị trí đứng là trong bảng và ô chứa số 1
+    if (x >= 0 && x < N && y >= 0 && y < N && maze[x][y] == 1)
+        return true;
+    return false;
+}
+
+bool solveMazeUtil(int maze[N][N], int x, int y, int sol[N][N])
+{
+    if (x == N - 1 && y == N - 1)
+    {
+        sol[x][y] = 1;
+        return true;
+    } // đã đến đích
+    if (isSafe(maze, x, y) == true)
+    { // nếu ô đang đứng là an toàn
+        sol[x][y] = 1;
+        if (solveMazeUtil(maze, x + 1, y, sol) == true)
+            return true; // di chuyển ngang
+        if (solveMazeUtil(maze, x, y + 1, sol) == true)
+            return true; // di chuyển xuống
+        sol[x][y] = 0;
+        return false; // quay lui
+    }
+    return false; // trường hợp không có lời giải
+}
+
+#define N 4
+int sol[4][4];
+bool solveMaze(int maze[N][N]) {}
+int main()
+{
+    int maze[N][N] = {{1, 0, 0, 0},
+                      {1, 1, 0, 1},
+                      {0, 1, 0, 0},
+                      {1, 1, 1, 1}};
+    solveMaze(maze);
+    return 0;
+}
+
+Phương pháp chia để trị (divide and conquer)
+
+-  Chia bài toán lớn thành các bài toán con
+- Giải các bài toán con
+- Kết hợp lời giải các bài toán con để có lời giải bài toán lớn
+
+Divide and conquer is an algorithm design paradigm based on multi-branched recursion.
+A divide-and-conquer algorithm works by recursively breaking down a problem into two
+or more sub-problems of the same or related type, until these become simple enough
+to be solved directly.
+The solutions to the sub-problems are then combined to give a solution to the original problem
+
+There are mainly three steps in a divide and conquer algorithm
+Divide — The problem is broken down or divided into a number of
+subproblems that are smaller instances of the same problem.
+Conquer — The subproblems are solved recursively. If the subproblem
+sizes are small enough , however, just solve them in a straightforward
+manner.
+Combine — The solution to the subproblems are combined to get the solution for the main problem
+
+Solving difficult problems
+Divide and conquer is a powerful tool for solving conceptually difficult
+problems: all it requires is a way of breaking the problem into sub-problems,
+of solving the trivial cases and of combining sub-problems to the original
+problem
+
+The divide-and-conquer paradigm often helps in the discovery of efficient algorithms. It was the key, for example, to Karatsuba's fast multiplication method, the quicksort and mergesort algorithms, the Strassen algorithm for matrix multiplication, and fast Fourier transforms.
+
+Divide-and-conquer algorithms are naturally adapted for execution in multi-processor machines, especially shared-memory systems where the
+communication of data between processors does not need to be planned in
+advance, because distinct sub-problems can be executed on different processor
+
+Phương pháp qui hoạch động (dynamic programming) 4 bước
+
+Giải bài toán bằng cách chia bài toán lớn thành các bài toán nhỏ
+Giải các bài toán nhỏ và ghi nhớ kết quả.
+Khi gặp một bài toán nhỏ đã giải thì dùng lại kết quả, không giải
+lại từ đầu.
+Qui hoạch động thường được dùng khi có các bài toán con trùng nhau
+
+
+Chia bi
+
+long long chia_bi(int m, int n)
+{
+if(m>0 && n==0) return 0;
+else if(m==0) return 1;
+else if (m<n) return chia_bi(m,m);
+else return chia_bi(m,n-1) + chia_bi(m-n,n);
+}
+
+int main()
+{
+int m=12, n=10, t1,t2; // m=60, n=46;
+t1=clock(); long long kq=chia_bi(m,n); t2=clock();
+cout<<"\n So cach chia "<<m<<" vien bi vao "<<n<<" hop la: "<<kq;
+cout<<"\n thoi gian tinh toan la = "<<(t2-t1);
+}
+
+Phương pháp tham lam
+
+Thuật toán xác suất: probabilistic algorithm
+A heuristic algorithm is one that is
+designed to solve a problem in a
+faster and more efficient fashion than
+traditional methods by sacrificing
+optimality, accuracy, precision, or  designed to solve a problem in a
+faster and more efficient fashion than
+traditional methods by sacrificing
+optimality, accuracy, precision, or
+completeness for speed.
+
+Heuristic algorithms often times used to solve NP-complete
+problems, a class of decision problems. In these problems, there is no
+known efficient way to find a solution quickly and accurately
+although solutions can be verified when given.
+
+Heuristics can produce a solution individually or be used to provide a
+good baseline and are supplemented with optimization algorithms.
+
+Heuristic algorithms are most often employed when approximate
+solutions are sufficient and exact solutions are necessarily
+computationally expensive.
