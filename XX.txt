@@ -38,6 +38,7 @@ s	a	b
 bình xăng để đi tuần.
 	3
 13. Điểm giống nhau giữa phương pháp chia để trị và phương pháp quy hoạch động là:
+	Chia bài toán thành các bài toán con
 14.Trong bài toán con chuột di chuyển trong mê cung để đi về đích,mộtôđược gọi là an toàn khi thoả bao nhiêu điều kiện:
  if (x >= 0 && x < N && y >= 0 && y < N && maze[x][y] == 1) 
  	5
