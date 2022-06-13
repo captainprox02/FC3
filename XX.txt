@@ -66,4 +66,62 @@ HAU TU T P G
 
 tiền tự, trung tự, hậu tự thứ tự lệnh in lần lượt là 1,2,3
 
-
+1.Khi chèn các giá trị8,4,10,12,5,9,3 vào cây BST,nếu duyệt theo
+chiều rộng ta sẽ được kết quả là:
+	8 4 10 3 5 9 12
+2.Giá trị nhỏ nhất trong cây BST sẽở bên ____ nhất.
+	trái
+3.Số phép quay khi chèn các giá trị4,10,7,8,22,9 vào cây AVL là
+	2
+4.Phép quay đầu tiên khi chèn các giá trị4,10,7,8,22,9vào cây AVL là:
+	qRL
+5.Phép quay cuối cùng khi chèn các giá trị4,10,7,8,22,9vào cây AVL là:
+	qRL
+6.Khi chèn các giá trị 4, 10, 7 , 8 , 33, 9, 2 vào cây AVL và duyệt theo chiều rộng, ta được dãy kết quả là:
+	8 4 10 2 7 9 13
+7.Khi tính X^13 theo phương pháp chia để trị. số phép nhân cần dùng là:
+	5
+8. Khi tính X^100 theo phương pháp chia để trị. số phép nhân cần dùng là:
+	8
+9.Nếu chèn các giá trị 3, 12, 4, 9, 10 vào bản băm có kích thước 7, số ô trong bản băm không chưa phần tử nào
+	3
+10.Nếu chèn các giá trị 3, 12, 4, 9, 10 vào bản băm có kích thước 7, xử lí đụng độ bằng phương pháp chaining list thì giá trị ô[3] trong bảng băm sẽ là
+	3 10
+11.Trong bài toán chia bi vào hộp, khi tính C(m, n), nếu n > m thì giá trị tại ô C(m, n) sẽ bằng ô 
+	C(m, m)
+12. Trong bài toán con kiến nếu n =2 và m = 4 thì ta được giá trị là:
+	15
+13.Trong bài toán người du lịch, nếu số thành phố là 6 thì số trường hợp phải thử (phương pháp vét cạn) để tìm lời giải là
+	120
+14. Để con trỏ p, đang trỏ đầu danh sách (khác rỗng), trỏ đêbs nốt cuối cùng của danh sách thì điều kiện còn thiếu trong vòng lặp while dưới đây là"
+	p->next != NULL
+15.Trong bài toán chuỗi con đối xứng dài nhất, nếu chuỗi cần tìm là LÂC, giá trị tại ô (2,4) là
+L(i,j)=2+L(i+1,j-1)nếuS[i]=S[j]
+L(i,j)=max(L(i+1,j),L(i,j-1))nếuS[i]<S[j]
+	3
+16.Trong bài toán chuỗi con đối xứng dài nhất, nếu chuỗi cần tìm là LÂC, giá trị tại ô (4,3) là
+	0
+17.Khi trộn 7 file có kích thước lần lượt là: 8, 7, 11, 5, 3, 12, 4 theo phương pháp tham lam số lần đọc file là
+	134
+18.Trog bài toán josephus, với n= 9 và k = 2 thì phần tử còn sót lại là
+	3
+19.File băn bản chứa 280 chữ A, 80 chữ B, 20 chữ C, 370 chữ D, 290 chữ E. Nếu nén file theo thuật toán nén Huffman thì chuỗi bit biễu diễn chữ D là
+	11
+20.File băn bản chứa 280 chữ A, 80 chữ B, 20 chữ C, 370 chữ D, 290 chữ E. Nếu nén file theo thuật toán nén Huffman thì chuỗi bit biễu diễn chuỗi ACE là
+	0100010
+21.Số thao tác làm thay đổi nội dung ngăn xếp là: 
+	4
+22.Số thao tác làm thay đổi nội dung hàng đợi là: 
+	4
+23. Trong thao tác duyệt hậu tự. lệnh in giá trị sẽ nằm ở thứ tự (1,2,3)
+	3
+24.Khi them một phần tửu x vào ngăn xếp, phần tử x sẽ ở vị trí ___ của ngăn xếp
+	top
+25.Tìm kiếm trên danh sách liên kết có độ phức tạp là
+	(On)
+26.Nếu mảng a đã sắ xếp tăng dần, ta có thể dùng phương pháp tìm kiếm ___ để tìm kiếm nhị phân
+	nhị phân
+27.Thuật toán tốt nhất để tìm dãy con liên tiếp có tổng lớn nhất có độ phức tạp là
+	(On^3)
+28.Phương pháp tham lam tìm giải bài toán người du lịch có độ phức tạp là
+ 	O(n^2)
